@@ -22,7 +22,7 @@
             title.appendChild(document.createTextNode(entry.title));
 			test.appendChild(document.createTextNode(entry.contentSnippet));
             container.appendChild(title);
-			container.appendChild(test);
+			container.appendChild("<div class = 'post_content'>"+test+"</div>");
           }
         }
       });
