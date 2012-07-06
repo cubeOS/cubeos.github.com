@@ -67,6 +67,10 @@ a:hover {
 	float: right;
 }
 
+.news, a.news {
+	color: #DDD;
+}
+
 /*
 
 	----- POSTS -----
