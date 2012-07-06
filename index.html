@@ -17,9 +17,12 @@
           var container = document.getElementById("feed");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
-            var div = document.createElement("div");
-            div.appendChild(document.createTextNode(entry.title));
-            container.appendChild(div);
+            var title = document.createElement("div");
+			var test = document.createElement("div");
+            title.appendChild(document.createTextNode(entry.title));
+			test.appendChild(document.createTextNode(entry.contentSnippet));
+            container.appendChild(title);
+			container.appendChild(test);
           }
         }
       });
