@@ -5,21 +5,6 @@
 	<link rel="shortcut icon" href="img/cubeOSIcon.png">
 	<title>CubeOS</title>
     
-    <iframe id="forum_embed"
- 		src="javascript:void(0)"
- 		scrolling="no"
- 		frameborder="0"
- 		width="900"
- 		height="700">
-	</iframe>
-
-	<script type="text/javascript">
- 		document.getElementById("forum_embed").src =
-  		"https://groups.google.com/forum/?hl=en&fromgroups#!forum/cubeos-org" +
-  		"&showsearch=true&showpopout=true&parenturl=" +
-  		encodeURIComponent(window.location.href);
-	</script>
-    
 </head>
 <body>
 
@@ -55,7 +40,21 @@
         </div>
         <div class = "content">
 			
-            <div id="forum_embed"></div>
+                    
+        <iframe id="forum_embed"
+            src="javascript:void(0)"
+            scrolling="no"
+            frameborder="0"
+            width="auto"
+            height="auto">
+        </iframe>
+    
+        <script type="text/javascript">
+            document.getElementById("forum_embed").src =
+            "https://groups.google.com/forum/?hl=en&fromgroups#!forum/cubeos-org" +
+            "&showsearch=true&showpopout=true&parenturl=" +
+            encodeURIComponent(window.location.href);
+        </script>
             
         </div>
   	</div>
