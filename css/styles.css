@@ -34,7 +34,7 @@ a:hover {
 .mids {
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 50px;
+	margin-top: 25px;
 	width: 50%;
 }
 
@@ -59,7 +59,7 @@ a:hover {
 .sidebar {
 	float: right;
 	width: 10%;
-	margin-top: 50px;
+	margin-top: 25px;
 	margin-right: 10%;
 }
 
