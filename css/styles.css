@@ -48,7 +48,7 @@ a:hover {
 .content {
 	padding: 10px;
 	background-color: #FFF;
-	
+
 }
 
 .logo {
@@ -61,4 +61,19 @@ a:hover {
 	width: 10%;
 	margin-top: 50px;
 	margin-right: 10%;
+}
+
+/*
+
+	----- POSTS -----
+	
+*/
+
+.post_title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.post_content {
+	color: #CCC;
 }
