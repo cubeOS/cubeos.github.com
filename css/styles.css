@@ -75,12 +75,6 @@ a.news:hover {
 	color: #CCC;
 }
 
-/*
-
-	----- POSTS -----
-	
-*/
-
 .post_title {
 	font-weight: bold;
 	font-size: 16px;
@@ -88,4 +82,14 @@ a.news:hover {
 
 .post_content {
 	
+}
+
+.odd {
+	padding: 5px;
+	background-color: #CCC;
+}
+
+.even {
+	padding: 5px;
+	background-color: #BBB;
 }
