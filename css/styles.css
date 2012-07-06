@@ -86,10 +86,10 @@ a.news:hover {
 
 .odd {
 	padding: 5px;
-	background-color: #CCC;
+	background-color: #DDD;
 }
 
 .even {
 	padding: 5px;
-	background-color: #BBB;
+	background-color: #CCC;
 }
