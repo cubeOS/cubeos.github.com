@@ -68,7 +68,11 @@ a:hover {
 }
 
 .news, a.news {
-	color: #DDD;
+	color: #FFF;
+}
+
+a.news:hover {
+	color: #CCC;
 }
 
 /*
