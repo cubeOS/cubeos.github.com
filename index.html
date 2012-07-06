@@ -5,6 +5,42 @@
 	<link rel="shortcut icon" href="img/cubeOSIcon.png">
 	<title>CubeOS</title>
     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("http://cubeos.tumblr.com/rss");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+			
+            var title = document.createElement("div");
+			var description = document.createElement("div");
+			var empty_space = document.createElement("div");
+			
+			title.setAttribute("class", "post_title");
+			description.setAttribute("class", "post_content");
+			
+            title.appendChild(document.createTextNode(entry.title));
+			description.appendChild(document.createTextNode(entry.contentSnippet));
+			
+            container.appendChild(title);
+			container.appendChild(description);
+			container.appendChild(empty_space);
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+	
+	</script>
+    
+    
+    
 </head>
 <body>
 
@@ -40,26 +76,10 @@
         </div>
         <div class = "content">
 			
-                    
-        <iframe id="forum_embed"
-            src="javascript:void(0)"
-            scrolling="yes"
-            frameborder="0"
-            width="100%"
-            height="500px">
-        </iframe>
-    
-        <script type="text/javascript">
-            document.getElementById("forum_embed").src =
-            "https://groups.google.com/forum/embed/?place=forum/cubeOS-org/news" +
-            "&showsearch=true&showpopout=true&parenturl=" +
-            encodeURIComponent(window.location.href);
-        </script>
+            <div id="feed"></div>
             
         </div>
   	</div>
-	
-    <div class = "mids"></div>
-    
+
 </body>
 </html>
