@@ -17,12 +17,18 @@
           var container = document.getElementById("feed");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
+			
             var title = document.createElement("div");
-			var test = document.createElement("div class = 'post_content'");
+			var description = document.createElement("div");
+			
+			title.setAttribute("post_title");
+			description.setAttribute("post_content");
+			
             title.appendChild(document.createTextNode(entry.title));
-			test.appendChild(document.createTextNode(entry.contentSnippet));
+			description.appendChild(document.createTextNode(entry.contentSnippet));
+			
             container.appendChild(title);
-			container.appendChild(test);
+			container.appendChild(description);
           }
         }
       });
