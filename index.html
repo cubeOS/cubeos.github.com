@@ -5,6 +5,43 @@
 	<link rel="shortcut icon" href="img/cubeOSIcon.png">
 	<title>CubeOS</title>
     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("http://cubeos.tumblr.com/rss");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+			
+            var title = document.createElement("div");
+			var description = document.createElement("div");
+			var empty_space = document.createElement("div");
+			
+			title.setAttribute("class", "post_title");
+			description.setAttribute("class", "post_content");
+			empty_space.setAttribute("style", "margin-top: 25px;");
+			
+            title.appendChild(document.createTextNode(entry.title));
+			description.appendChild(document.createTextNode(entry.contentSnippet));
+			
+            container.appendChild(title);
+			container.appendChild(description);
+			container.appendChild(empty_space);
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+	
+	</script>
+    
+    
+    
 </head>
 <body>
 
@@ -13,7 +50,7 @@
     </div>
     
     <div class = "logo">
-    	<img src = "img/cubeOSLogo.png" />
+    	<img src = "img/cubeOSLogo.png" width = "256px" height = "192px"/>
     </div>
     
     <div class = "sidebar">
@@ -23,6 +60,20 @@
         <div class = "content">
         	1.0 <a href="http://cubeos.github.com/cubeOS-alpha/">alpha</a>
         </div>
+        
+        <div style = "margin-top: 25;"></div>
+        
+        <div class = "label">
+        	Navigation
+        </div>
+        <div class = "content">
+        	  <a href="news">News</a>
+            <br /><a href="builds">Builds</a>
+            <br /><a href="group.html">Group</a>
+            <br /><a href="questions.html">Questions</a>
+            <br /><a href="https://github.com/cubeOS/cubeOS-alpha/issues?milestone=&page=1&state=open">Issues</a>
+        </div>
+        
     </div>
     
     <div class = "mids">
@@ -36,10 +87,12 @@
     
     <div class = "mids">
    		<div class = "label">
-        	News
+        	News <div class = "r"><a href="news" class = "news">View All News</a></div>
         </div>
         <div class = "content">
-        	News goes here!
+			
+            <div id="feed"></div>
+            
         </div>
   	</div>
 
